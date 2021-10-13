@@ -14,7 +14,11 @@
 		D8C5E82927171BB10045DE51 /* Pokedex_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8C5E82727171BB10045DE51 /* Pokedex_App.xcdatamodeld */; };
 		D8C5E82B27171BB10045DE51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C5E82A27171BB10045DE51 /* Assets.xcassets */; };
 		D8C5E82E27171BB10045DE51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C5E82C27171BB10045DE51 /* LaunchScreen.storyboard */; };
-		D8C5E83627171DE20045DE51 /* VIPER in Resources */ = {isa = PBXBuildFile; fileRef = D8C5E83527171DE20045DE51 /* VIPER */; };
+		D8C5E87A271720080045DE51 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5E875271720080045DE51 /* Entity.swift */; };
+		D8C5E87B271720080045DE51 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5E876271720080045DE51 /* Interactor.swift */; };
+		D8C5E87C271720080045DE51 /* Presenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5E877271720080045DE51 /* Presenter.swift */; };
+		D8C5E87D271720080045DE51 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5E878271720080045DE51 /* Router.swift */; };
+		D8C5E87E271720080045DE51 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5E879271720080045DE51 /* View.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +31,11 @@
 		D8C5E82A27171BB10045DE51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8C5E82D27171BB10045DE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D8C5E82F27171BB10045DE51 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D8C5E83527171DE20045DE51 /* VIPER */ = {isa = PBXFileReference; lastKnownFileType = folder; path = VIPER; sourceTree = "<group>"; };
+		D8C5E875271720080045DE51 /* Entity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Entity.swift; sourceTree = "<group>"; };
+		D8C5E876271720080045DE51 /* Interactor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Interactor.swift; sourceTree = "<group>"; };
+		D8C5E877271720080045DE51 /* Presenter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Presenter.swift; sourceTree = "<group>"; };
+		D8C5E878271720080045DE51 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
+		D8C5E879271720080045DE51 /* View.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				D8C5E81E27171BB10045DE51 /* AppDelegate.swift */,
-				D8C5E83527171DE20045DE51 /* VIPER */,
+				D8C5E874271720010045DE51 /* VIPER */,
 				D8C5E82027171BB10045DE51 /* SceneDelegate.swift */,
 				D8C5E82227171BB10045DE51 /* ViewController.swift */,
 				D8C5E82427171BB10045DE51 /* Main.storyboard */,
@@ -71,6 +79,18 @@
 				D8C5E82727171BB10045DE51 /* Pokedex_App.xcdatamodeld */,
 			);
 			path = "Pokedex-App";
+			sourceTree = "<group>";
+		};
+		D8C5E874271720010045DE51 /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				D8C5E875271720080045DE51 /* Entity.swift */,
+				D8C5E876271720080045DE51 /* Interactor.swift */,
+				D8C5E877271720080045DE51 /* Presenter.swift */,
+				D8C5E878271720080045DE51 /* Router.swift */,
+				D8C5E879271720080045DE51 /* View.swift */,
+			);
+			path = VIPER;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -133,7 +153,6 @@
 				D8C5E82E27171BB10045DE51 /* LaunchScreen.storyboard in Resources */,
 				D8C5E82B27171BB10045DE51 /* Assets.xcassets in Resources */,
 				D8C5E82627171BB10045DE51 /* Main.storyboard in Resources */,
-				D8C5E83627171DE20045DE51 /* VIPER in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,7 +163,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C5E87D271720080045DE51 /* Router.swift in Sources */,
+				D8C5E87B271720080045DE51 /* Interactor.swift in Sources */,
+				D8C5E87C271720080045DE51 /* Presenter.swift in Sources */,
 				D8C5E82927171BB10045DE51 /* Pokedex_App.xcdatamodeld in Sources */,
+				D8C5E87A271720080045DE51 /* Entity.swift in Sources */,
+				D8C5E87E271720080045DE51 /* View.swift in Sources */,
 				D8C5E82327171BB10045DE51 /* ViewController.swift in Sources */,
 				D8C5E81F27171BB10045DE51 /* AppDelegate.swift in Sources */,
 				D8C5E82127171BB10045DE51 /* SceneDelegate.swift in Sources */,
