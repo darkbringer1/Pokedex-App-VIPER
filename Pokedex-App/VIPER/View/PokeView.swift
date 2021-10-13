@@ -25,9 +25,7 @@ class PokeViewController: UICollectionViewController, AnyView {
     @objc func showSearchBar() {
         print("Search button pressed")
     }
-    
-    let array = ["a", "b", "c"]
-    
+        
     func configureViewComponents() {
         
         let layout = UICollectionViewFlowLayout()
@@ -48,17 +46,28 @@ class PokeViewController: UICollectionViewController, AnyView {
         navigationItem.rightBarButtonItem?.tintColor = .black
         
         collectionView.register(PokedexCell.self, forCellWithReuseIdentifier: reuseIdentifier)
+        
     }
     
+    var pokemons: [Pokemon] = []
+    
     func update(with users: [User]) {
-        
+        print("got users")
     }
     
     func update(with error: String) {
-        
+        DispatchQueue.main.async {
+            self.pokemons = []
+            self.collectionView.isHidden = true
+        }
     }
     func update(with pokemons: [Pokemon]) {
-        
+        print("Got pokemons")
+        DispatchQueue.main.async {
+            self.pokemons = pokemons
+            self.collectionView.reloadData()
+            self.collectionView.isHidden = false
+        }
     }
     
 }
@@ -66,7 +75,7 @@ class PokeViewController: UICollectionViewController, AnyView {
 extension PokeViewController {
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return 9
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

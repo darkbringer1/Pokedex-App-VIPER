@@ -3,14 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		D8C5E81F27171BB10045DE51 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5E81E27171BB10045DE51 /* AppDelegate.swift */; };
 		D8C5E82127171BB10045DE51 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5E82027171BB10045DE51 /* SceneDelegate.swift */; };
-		D8C5E82327171BB10045DE51 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5E82227171BB10045DE51 /* ViewController.swift */; };
-		D8C5E82627171BB10045DE51 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C5E82427171BB10045DE51 /* Main.storyboard */; };
 		D8C5E82927171BB10045DE51 /* Pokedex_App.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D8C5E82727171BB10045DE51 /* Pokedex_App.xcdatamodeld */; };
 		D8C5E82B27171BB10045DE51 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D8C5E82A27171BB10045DE51 /* Assets.xcassets */; };
 		D8C5E82E27171BB10045DE51 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D8C5E82C27171BB10045DE51 /* LaunchScreen.storyboard */; };
@@ -25,14 +23,13 @@
 		D8C5E896271721040045DE51 /* Interactor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5E894271721040045DE51 /* Interactor.swift */; };
 		D8C5E897271721040045DE51 /* AnyInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5E895271721040045DE51 /* AnyInteractor.swift */; };
 		D8C5E899271721090045DE51 /* Entity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D8C5E898271721090045DE51 /* Entity.swift */; };
+		D8C5E89C27175F920045DE51 /* BaseComponents in Frameworks */ = {isa = PBXBuildFile; productRef = D8C5E89B27175F920045DE51 /* BaseComponents */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		D8C5E81B27171BB10045DE51 /* Pokedex-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Pokedex-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D8C5E81E27171BB10045DE51 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D8C5E82027171BB10045DE51 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		D8C5E82227171BB10045DE51 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		D8C5E82527171BB10045DE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		D8C5E82827171BB10045DE51 /* Pokedex_App.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Pokedex_App.xcdatamodel; sourceTree = "<group>"; };
 		D8C5E82A27171BB10045DE51 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D8C5E82D27171BB10045DE51 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -55,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D8C5E89C27175F920045DE51 /* BaseComponents in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,11 +78,9 @@
 		D8C5E81D27171BB10045DE51 /* Pokedex-App */ = {
 			isa = PBXGroup;
 			children = (
-				D8C5E81E27171BB10045DE51 /* AppDelegate.swift */,
 				D8C5E874271720010045DE51 /* VIPER */,
+				D8C5E81E27171BB10045DE51 /* AppDelegate.swift */,
 				D8C5E82027171BB10045DE51 /* SceneDelegate.swift */,
-				D8C5E82227171BB10045DE51 /* ViewController.swift */,
-				D8C5E82427171BB10045DE51 /* Main.storyboard */,
 				D8C5E82A27171BB10045DE51 /* Assets.xcassets */,
 				D8C5E82C27171BB10045DE51 /* LaunchScreen.storyboard */,
 				D8C5E82F27171BB10045DE51 /* Info.plist */,
@@ -108,9 +104,9 @@
 		D8C5E87F271720340045DE51 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				D8C5E884271720C10045DE51 /* AnyView.swift */,
-				D8C5E887271720C10045DE51 /* PokedexCell.swift */,
 				D8C5E886271720C10045DE51 /* PokeView.swift */,
+				D8C5E887271720C10045DE51 /* PokedexCell.swift */,
+				D8C5E884271720C10045DE51 /* AnyView.swift */,
 				D8C5E885271720C10045DE51 /* View.swift */,
 			);
 			path = View;
@@ -119,8 +115,8 @@
 		D8C5E880271720390045DE51 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				D8C5E895271721040045DE51 /* AnyInteractor.swift */,
 				D8C5E894271721040045DE51 /* Interactor.swift */,
+				D8C5E895271721040045DE51 /* AnyInteractor.swift */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -128,8 +124,8 @@
 		D8C5E881271720470045DE51 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				D8C5E891271721000045DE51 /* AnyPresenter.swift */,
 				D8C5E890271721000045DE51 /* Presenter.swift */,
+				D8C5E891271721000045DE51 /* AnyPresenter.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -145,8 +141,8 @@
 		D8C5E883271720560045DE51 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				D8C5E88D271720FB0045DE51 /* AnyRouter.swift */,
 				D8C5E88C271720FB0045DE51 /* Router.swift */,
+				D8C5E88D271720FB0045DE51 /* AnyRouter.swift */,
 			);
 			path = Router;
 			sourceTree = "<group>";
@@ -167,6 +163,9 @@
 			dependencies = (
 			);
 			name = "Pokedex-App";
+			packageProductDependencies = (
+				D8C5E89B27175F920045DE51 /* BaseComponents */,
+			);
 			productName = "Pokedex-App";
 			productReference = D8C5E81B27171BB10045DE51 /* Pokedex-App.app */;
 			productType = "com.apple.product-type.application";
@@ -194,6 +193,9 @@
 				Base,
 			);
 			mainGroup = D8C5E81227171BB10045DE51;
+			packageReferences = (
+				D8C5E89A27175F920045DE51 /* XCRemoteSwiftPackageReference "BaseComponents" */,
+			);
 			productRefGroup = D8C5E81C27171BB10045DE51 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -210,7 +212,6 @@
 			files = (
 				D8C5E82E27171BB10045DE51 /* LaunchScreen.storyboard in Resources */,
 				D8C5E82B27171BB10045DE51 /* Assets.xcassets in Resources */,
-				D8C5E82627171BB10045DE51 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,7 +229,6 @@
 				D8C5E888271720C10045DE51 /* AnyView.swift in Sources */,
 				D8C5E897271721040045DE51 /* AnyInteractor.swift in Sources */,
 				D8C5E88F271720FB0045DE51 /* AnyRouter.swift in Sources */,
-				D8C5E82327171BB10045DE51 /* ViewController.swift in Sources */,
 				D8C5E88E271720FB0045DE51 /* Router.swift in Sources */,
 				D8C5E896271721040045DE51 /* Interactor.swift in Sources */,
 				D8C5E81F27171BB10045DE51 /* AppDelegate.swift in Sources */,
@@ -242,14 +242,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		D8C5E82427171BB10045DE51 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D8C5E82527171BB10045DE51 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		D8C5E82C27171BB10045DE51 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -437,6 +429,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D8C5E89A27175F920045DE51 /* XCRemoteSwiftPackageReference "BaseComponents" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/darkbringer1/BaseComponents.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.18;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D8C5E89B27175F920045DE51 /* BaseComponents */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D8C5E89A27175F920045DE51 /* XCRemoteSwiftPackageReference "BaseComponents" */;
+			productName = BaseComponents;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		D8C5E82727171BB10045DE51 /* Pokedex_App.xcdatamodeld */ = {

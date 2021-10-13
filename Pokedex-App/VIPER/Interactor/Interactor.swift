@@ -17,32 +17,37 @@ import Foundation
 
 
 class UserInteractor: AnyInteractor {
+    
     var presenter: AnyPresenter?
     
     let pokemonApi = "https://pokedex-bb36f.firebaseio.com/pokemon.json"
+    let usersApi = "https://jsonplaceholder.typicode.com/users"
+    
     
     func getUsers() {
         
-        print("Start Fetching Users")
-        
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/users") else { return }
-        let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
-            guard let data = data, error == nil else {
-                self?.presenter?.interactorDidFetchUsers(with: .failure(FetchError.failed))
-                return
-            }
-            do {
-                let entities = try JSONDecoder().decode([User].self, from: data)
-                self?.presenter?.interactorDidFetchUsers(with: .success(entities))
-                
-            } catch {
-                self?.presenter?.interactorDidFetchUsers(with: .failure(error))
-            }
-        }
-        task.resume()
+//        print("Start Fetching Users")
+//
+//        guard let url = URL(string: usersApi) else { return }
+//        let task = URLSession.shared.dataTask(with: url) { [weak self] data, _, error in
+//            guard let data = data, error == nil else {
+//                self?.presenter?.interactorDidFetchUsers(with: .failure(FetchError.failed))
+//                return
+//            }
+//            do {
+//                let entities = try JSONDecoder().decode([User].self, from: data)
+//                self?.presenter?.interactorDidFetchUsers(with: .success(entities))
+//
+//            } catch {
+//                self?.presenter?.interactorDidFetchUsers(with: .failure(error))
+//            }
+//        }
+//        task.resume()
     }
     
     func fetchPokemon() {
+        
+        print("Start Fetching Pokemon")
         
         guard let url = URL(string: pokemonApi) else { return }
         
@@ -55,6 +60,7 @@ class UserInteractor: AnyInteractor {
             do {
                 let entities = try JSONDecoder().decode([Pokemon].self, from: data)
                 self?.presenter?.interactorDidFetchPokemons(with: .success(entities))
+                print(entities)
             } catch {
                 self?.presenter?.interactorDidFetchPokemons(with: .failure(error))
             }
