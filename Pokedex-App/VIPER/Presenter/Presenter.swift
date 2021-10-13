@@ -14,18 +14,6 @@ import Foundation
 // Holds all the references to Interactor, Router and View
 // Needs to present to view and tell the view what to do
 
-enum FetchError: Error {
-    case failed
-}
-
-protocol AnyPresenter {
-    var router: AnyRouter? { get set }
-    var interactor: AnyInteractor? { get set }
-    var view: AnyView? { get set }
-    
-    func interactorDidFetchUsers(with result: Result<[User], Error>)
-}
-
 class UserPresenter: AnyPresenter {
     
     var router: AnyRouter?
@@ -33,6 +21,7 @@ class UserPresenter: AnyPresenter {
     var interactor: AnyInteractor? {
         didSet {
             interactor?.getUsers()
+            interactor?.fetchPokemon()
         }
     }
     
@@ -46,4 +35,16 @@ class UserPresenter: AnyPresenter {
                 view?.update(with: "Something went wrong")
         }
     }
+    
+    func interactorDidFetchPokemons(with result: Result<[Pokemon], Error>) {
+        switch result {
+            case .success(let pokemons):
+                view?.update(with: pokemons)
+            case .failure:
+                view?.update(with: "Interactor Couldn't fetch Pokemons")
+        }
+    }
+    
+    
+    
 }
